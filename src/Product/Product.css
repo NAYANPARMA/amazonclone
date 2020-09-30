@@ -11,6 +11,9 @@
     max-height: 400px;
     min-width: 100px;
 }
+.product:hover{
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+}
 
 .product__info{
     height: 100px;
