@@ -1,37 +1,7 @@
 import React, {useEffect} from 'react'
 import Product from '../Product/Product'
 import './Home.css'
-
-
-function slider(counter) {
-  const slides = document.querySelectorAll(".home__image");
-
-  slides.forEach((slide, index) => {
-    if (index !== counter) {
-      slide.style.visibility = `hidden`;
-      slide.classList.add(`image-${index}`);
-    }
-  });
-  moveCorousal(counter, slides, slides.length);
-}
-
-function moveCorousal(counter, slides, len) {
-  if (slides) {
-    if (counter >= len - 1) counter = 0;
-    else counter += 1;
-
-    slides.forEach((slide, index) => {
-      if (index === counter) {
-        slide.style.visibility = `visible`;
-      } else {
-        slide.style.visibility = `hidden`;
-      }
-    });
-  }
-  setTimeout(() => {
-    moveCorousal(counter, slides, len);
-  }, 2000);
-}
+import {Carousel} from "react-bootstrap";
 
 const images = [
   "https://images-eu.ssl-images-amazon.com/images/G/31/skillsstore/2020/August/Medh_Alexa_GW_3000x1200._CB405585145_.jpg",
@@ -45,22 +15,19 @@ const images = [
 ];
 
 function Home() {
-  useEffect(() => slider(0), []);
-
     return (
       <div className="home">
         <div className="home__container">
-          <div className="home__slidercontainer">
-            {images.map( (image,index) => (
-                <div className="home__slide">
+          <Carousel indicators={false} controls={false} >
+            {images.map((image) => (
+              <Carousel.Item interval={1000}>
                 <img
                   className="home__image"
-                  src={image}
-                  alt="image" index
+                  src= {image} 
                 />
-                </div>
+              </Carousel.Item>
             ))}
-        </div>
+          </Carousel>
           <div className="home__row">
             <Product
               id={123123123}
