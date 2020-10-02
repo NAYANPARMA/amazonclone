@@ -18,45 +18,76 @@ function Home() {
     return (
       <div className="home">
         <div className="home__container">
-          <Carousel indicators={false} controls={false} >
+          <Carousel indicators={false} controls={false}>
             {images.map((image) => (
               <Carousel.Item interval={1000}>
-                <img
-                  className="home__image"
-                  src= {image} 
-                />
+                <img className="home__image" src={image} />
               </Carousel.Item>
             ))}
           </Carousel>
           <div className="home__row">
             <Product
-              id={123123123}
+              id="123123123"
               title="The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses "
-              price={29.99}
+              price={290.99}
               image="https://images-na.ssl-images-amazon.com/images/I/81-QB7nDh4L.jpg"
               rating={5}
             />
             <Product
-              id={123123124}
+              id="123123124"
               title="Samsung 6.5 kg Fully-Automatic Top Loading Washing Machine (WA65A4002VS/TL, IMPERIAL SILVER, Center Jet Technology)"
-              price={199.99}
+              price={19999.99}
               image="https://www.lg.com/in/images/washing-machines/md06182036/gallery/D01.jpg"
               rating={3}
             />
           </div>
+
           <div className="home__row">
             <Product
-              id={123123125}
+              id="123123125"
               title="Apple MacBook Air (13-inch, 8GB RAM, 128GB Storage, 1.8GHz Intel Core i5) - Silver"
-              price={159.99}
+              price={99999.99}
               image="https://cdn.vox-cdn.com/thumbor/3SDag4_szhZrsfE86H7OGXcesxs=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/19395168/vpavic_191118_3800_0122.jpg"
               rating={5}
             />
-            <Product />
-            <Product />
+            <Product
+              id="4903850"
+              title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor"
+              price={49999.99}
+              rating={3}
+              image="https://images-na.ssl-images-amazon.com/images/I/71Swqqe7XAL._AC_SX466_.jpg"
+            />
+            <Product
+              id="23445930"
+              title="Amazon Echo (3rd generation) | Smart speaker with Alexa, Charcoal Fabric"
+              price={9999.99}
+              rating={5}
+              image="https://media.very.co.uk/i/very/P6LTG_SQ1_0000000071_CHARCOAL_SLf?$300x400_retinamobilex2$"
+            />
+            <Product
+              id="3254354345"
+              title="New Apple iPad Pro (12.9-inch, Wi-Fi, 128GB) - Silver (4th Generation)"
+              price={29999.99}
+              rating={4}
+              image="https://images-na.ssl-images-amazon.com/images/I/816ctt5WV5L._AC_SX385_.jpg"
+            />
           </div>
+
           <div className="home__row">
-            <Product />
+            <Product
+              id="49538094"
+              title="Kenwood kMix Stand Mixer for Baking, Stylish Kitchen Mixer with K-beater, Dough Hook and Whisk, 5 Litre Glass Bowl"
+              price={16000.0}
+              rating={4}
+              image="https://images-na.ssl-images-amazon.com/images/I/81O%2BGNdkzKL._AC_SX450_.jpg"
+            />
+            <Product
+              id="90829332"
+              title="Samsung LC49RG90SSUXEN 49' Curved LED Gaming Monitor - Super Ultra Wide Dual WQHD 5120 x 1440"
+              price={49999.98}
+              rating={4}
+              image="https://images-na.ssl-images-amazon.com/images/I/6125mFrzr6L._AC_SX355_.jpg"
+            />
           </div>
         </div>
       </div>

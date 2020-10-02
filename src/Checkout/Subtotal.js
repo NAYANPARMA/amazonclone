@@ -12,27 +12,29 @@ function Subtotal() {
     const [{ basket }, dispatch] = useStateValue();
 
     return (
-        <div className='subtotal'>
-            <CurrencyFormat
-                renderText = {(value) => (
-                    <>
-                        <p>
-                            Subtotal ({basket?.length} iteams): <strong>{value}</strong>
-                        </p>
-                        <small className='subtotal__gift'>
-                            <input type="checkbox"/> This order conatain a gift
-                        </small>
-                    </>
-                )} 
-                decimalScale={2}
-                value ={getBasketTotal(basket)}
-                displayType={"text"}
-                thousandSeparator={true}
-                prefix={"$"} 
-            />
-            <button onClick={ e => history.push('/payment')}>Proceed to Checkout</button>
-        </div>
-    )
+      <div className="subtotal">
+        <CurrencyFormat
+          renderText={(value) => (
+            <>
+              <p>
+                Subtotal ({basket?.length} iteams): <strong>{value}</strong>
+              </p>
+              <small className="subtotal__gift">
+                <input type="checkbox" /> This order conatain a gift
+              </small>
+            </>
+          )}
+          decimalScale={2}
+          value={getBasketTotal(basket)}
+          displayType={"text"}
+          thousandSeparator={true}
+          prefix='&#8377;'
+        />
+        <button onClick={(e) => history.push("/payment")}>
+          Proceed to Checkout
+        </button>
+      </div>
+    );
 }
 
 export default Subtotal

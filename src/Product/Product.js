@@ -5,7 +5,7 @@ import './Product.css'
 function Product(props) {
 
   const [ state , dispatch] = useStateValue()
-  
+  console.log(props.price.toFixed());
   const addtoBasket = () =>{
     // dispatch action 
     dispatch({
@@ -25,7 +25,7 @@ function Product(props) {
         <div className="product__info">
           <p>{props.title}</p>
           <p className="product__price">
-            <small>$</small>
+            <small> &#8377; </small>
             <strong>{props.price}</strong>
           </p>
           <div className="product__rating">
@@ -38,7 +38,9 @@ function Product(props) {
         </div>
 
         <img src={props.image} />
-        <button onClick={addtoBasket} style={{'cursor':'pointer'}}>Add to basket</button>
+        <button onClick={addtoBasket} style={{ cursor: "pointer" }}>
+          Add to basket
+        </button>
       </div>
     );
 }

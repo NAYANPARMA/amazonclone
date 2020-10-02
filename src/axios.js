@@ -1,7 +1,9 @@
-import axios from 'axios';
+import axios from "axios";
 
 const instance = axios.create({
-    baseURL:'....' // the api url 
-})
+  // THE API  URL
+  baseURL: "https://amazonclonepayment.herokuapp.com"
+  //"http://localhost:3001"
+});
 
 export default instance;
